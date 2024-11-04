@@ -9,7 +9,6 @@ resource "google_compute_subnetwork" "app" {
   region        = "us-west1"
   network       = google_compute_network.app.id
   }
-}
 
 
 data "google_compute_image" "ubuntu" {
