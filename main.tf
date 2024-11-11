@@ -8,7 +8,7 @@ module "app_network" {
   subnets = [
    {
       subnet_name   = "${var.network_name}-subnet0"
-      ubnet_ip      = var.network_ip_range
+      subnet_ip      = var.network_ip_range
       subnet_region = var.region
     }
   ]
@@ -18,7 +18,7 @@ module "app_network" {
       description   = "Inbound web"
     
       source_ranges    = ["0.0.0.0/0"] 
-      target_tags      = "${var.network_name}-web"
+      target_tags      = ["${var.network_name}-web"]
 
       allow = [
         {
