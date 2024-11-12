@@ -38,10 +38,9 @@ data "google_compute_image" "ubuntu" {
 
 resource "google_compute_instance" "blog" {
   name         = var.app_name
-  machine_type = var.image_family
+  machine_type = var.machine_type
 
   tags = ["{var.network_name}-web"]
-
   
   boot_disk {
     initialize_params {
